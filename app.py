@@ -4,12 +4,18 @@ import requests
 from imdb import IMDb
 from dotenv import load_dotenv
 import os
+from helper import generate_model_files
 
 # Initialize IMDb instance
 ia = IMDb()
 
 load_dotenv()
 api_key = os.getenv("TMDB_API_KEY")
+
+# Check if model files are missing, then generate them if needed
+if not os.path.exists('model/movie_list.pkl') or not os.path.exists('model/similarity.pkl'):
+    st.info("Generating model files. This may take a few moments...")
+    generate_model_files()
 
 try:
     movies = pickle.load(open('model/movie_list.pkl', 'rb'))

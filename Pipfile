@@ -12,6 +12,7 @@ requests = "*"
 nltk = "*"
 python-dotenv = "*"
 imdbpy = "*"
+nbclient = "*"
 
 [dev-packages]
 ipykernel = "*"
