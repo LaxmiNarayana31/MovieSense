@@ -25,7 +25,7 @@
   pipenv install # Install dependencies
   ```
 -  Create a `.env` file and add the TMDB API key to it.
-  ```
+  ```bash
   TMDB_API_KEY=
   ```
 - Run the application:
