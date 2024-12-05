@@ -12,12 +12,28 @@
 - **User Interface**: Built with Streamlit for an interactive, easy-to-use UI.
 - **IMDb API**: Integrates IMDb API to fetch movie ratings for the recommended movies.
 - **Dataset**: The project uses a dataset available from [kaggle.](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
- 
 
-# Setting up the Project
+## Project Setup
 
-1. Clone the repository using the command `git clone https://github.com/LaxmiNarayana31/MovieSense.git`
-2. Create a virtual environment using `pipenv shell`
-3. Install the required packages using `pipenv install` (make sure you have pipenv installed in your machine)
-4. Create a `.env` file and add the TMDB API key to it.
-5. Run the script using `streamlit run app.py` or `pipenv run app`
+- Clone the repository:
+  ```bash
+  git clone https://github.com/LaxmiNarayana31/MovieSense.git
+  ```
+- Create a virtual environment using pipenv. If you don't have pipenv installed, you can install it by running `pip install pipenv` in your terminal.
+  ```bash
+  pipenv shell # Create a virtual environment
+  pipenv install # Install dependencies
+  ```
+-  Create a `.env` file and add the TMDB API key to it.
+  ```
+  TMDB_API_KEY=
+  ```
+- Run the application:
+  ```bash
+  pipenv run main
+  ```
+  or
+  ```bash
+  streamlit run main.py
+  ```
+
